@@ -3,6 +3,7 @@
 The purpose of this application is to list Starwars movies and get detailed information about a particular movie.
 
 The application is already setup with the required routes.
+
 / 						  (homepage)
 
 /movies 		    (listview)
