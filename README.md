@@ -28,8 +28,12 @@ Your assignment is to implement a simple Aurelia Application satisfying the requ
 ## Requirements
 
 1. The app should be able to list all movies from the api: https://swapi.dev/documentation
-
 2. Clicking on a movie should list some interesting details about that movie.
-
 3. Create atleast one component that you can reuse in your app. 
 4. Styling is not required. 
+
+
+## Additional Questions
+1. Fetching data from a third party api can be slow, how would you improve performance in this application?
+2. Testing can be benificial, what is reasonable to test in this application?
+3. Currently the project only support css, how would you add support for less or sass?
