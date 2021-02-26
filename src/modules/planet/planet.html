@@ -1,0 +1,17 @@
+<template>
+  <div>
+      <div click.trigger="getPlanet()" class="planet 
+      ${planet.terrain == 'grasslands, mountains' ? 'bg-grasslands' : ''} 
+      ${planet.terrain == 'desert' ? 'bg-desert' : ''}
+      ${planet.terrain == 'jungle, rainforests' ? 'bg-jungle' : ''}
+      ">
+            <div if.bind="!loading">
+            <h4>${planet.name}</h4>
+            </div>
+            <div if.bind="loading">
+              Getting planet...
+            </div>
+      </div>
+  </div>
+  
+</template>
