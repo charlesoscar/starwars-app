@@ -1,3 +1,71 @@
 <template>
-  <h1>Starwars App</h1>
+  <require from="./home.css"></require>
+  <div class="starwars">
+    <img src.bind="starImgSrc" alt="Star" class="star">
+    <img src.bind="warsImgSrc" alt="Wars" class="wars">
+    <h2 class="byline" id="byline"><span repeat.for="char of text.length">${text[char]}
+        <span if.bind="text[char] === ' '" class="space-between"></span>
+      </span></h2>
+  </div>
+  <div>
+  <div id="titles">
+    <div id="titlecontent">
+
+      <p>Starwars APP</p>
+
+      <p>The purpose of this application is to list Starwars movies and get detailed information about a particular
+        movie.</p>
+
+      <p>The application is already setup with the required routes.</p>
+
+      <p>/ (homepage)</p>
+
+      <p>/movies (listview)</p>
+
+      <p>/movies/:id (detailsview)</p>
+
+      <p>Prerequisits</p>
+
+      <p>Node</p>
+
+      <p>Npm</p>
+
+      <p>Assignment</p>
+
+      <p>Your assignment is to implement a simple Aurelia Application satisfying the requirements listed below.</p>
+
+      <p>Start by forking the repository.</p>
+
+      <p>Clone the fork to your local machine.</p>
+
+      <p>Implement a solution, committing your changes along the way.</p>
+
+      <p>Create a pull request from the new fork
+        (https://help.github.com/articles/creating-a-pull-request-from-a-fork/).</p>
+
+      <p>Requirements</p>
+
+      <p>The app should be able to list all movies from the api: https://swapi.dev/documentation</p>
+
+      <p>Clicking on a movie should list some interesting details about that movie.</p>
+
+      <p>Create atleast one component that you can reuse in your app.</p>
+
+      <p>Styling is not required.</p>
+
+      <p>Additional Questions</p>
+
+      <p>Fetching data from a third party api can be slow, how would you improve performance in this application?</p>
+
+      <p>Testing can be benificial, what is reasonable to test in this application?</p>
+
+      <p>Currently the project only support css, how would you add support for less or sass?</p>
+
+    </div>
+  </div>
+  
+  <audio id="bgAudio" controls>
+    <source src="http://www.thesoundarchive.com/starwars/star-wars-theme-song.mp3" />
+    Your browser does not support the audio element.
+  </audio>
 </template>

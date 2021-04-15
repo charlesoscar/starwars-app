@@ -1,8 +1,10 @@
 <template>
   <require from="./app.css"></require>
-  <ul repeat.for="nav of router.navigation">
-      <li class="${nav.isActive ? 'active' : ''}"><a href.bind="nav.href">${nav.title}</a></li>
+  <nav class="navbar navbar-dark justify-content-center bg-dark">
+  <ul class="nav  justify-content-center" >
+      <li repeat.for="nav of router.navigation" class="nav-link ${nav.isActive ? 'active' : ''}"><a href.bind="nav.href">${nav.title}</a></li>
   </ul>
+</nav>
   <router-view></router-view>
 </template>
 

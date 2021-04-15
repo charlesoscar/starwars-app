@@ -1,0 +1,185 @@
+/* STAR WARS */
+/* Animation properties */
+.star {
+    animation: star 10s ease-out forwards;
+  }
+  .wars {
+    animation: wars 10s ease-out forwards;
+  }
+  .byline span {
+    animation: spin-letters 10s linear forwards;
+  }
+  .byline {
+    animation: move-byline 10s linear forwards;
+  }
+  
+  /* Keyframes */
+  @keyframes star {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) translateY(-0.75em);
+    }
+    20% {
+      opacity: 1;
+    }
+    89% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateZ(-1000em);
+    }
+  }
+  
+  @keyframes wars {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) translateY(0.5em);
+    }
+    20% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateZ(-1000em);
+    }
+  }
+  
+  @keyframes spin-letters {
+    0%, 10% {
+      opacity: 0;
+      transform: rotateY(90deg);
+    }
+    30% {
+      opacity: 1;
+    }
+    70%, 86% {
+      transform: rotateY(0);
+      opacity: 1;
+    }
+    93%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes move-byline {
+    0% {
+      transform: translateZ(5em);
+    }
+    100% {
+      transform: translateZ(0);
+    }
+  }
+  
+  @keyframes scroll {
+      0% { top: 100%; }
+      100% { top: -170%; }
+  }
+  
+  .space-between {
+    padding: 0px 10px 0px 10px;
+  }
+  
+  /* Make the 3D work on the container */
+  .starwars {
+    perspective: 800px;
+    transform-style: preserve3d;
+  }
+  
+  /* General styles and layout */
+  body {
+    background: #000 url(//cssanimation.rocks/demo/starwars/images/bg.jpg);
+  }
+  .nav-link a {
+    color: yellow;
+  }
+  
+  a {
+    color: black;
+  }
+  
+  .starwars {
+    height: 17em;
+    left: 50%;
+    position: absolute;
+    top: 53%;
+    transform: translate(-50%, -50%);
+    width: 34em;
+  }
+  
+  .byline span {
+    display: inline-block;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  .star, .wars, .byline {
+    position: absolute;
+  }
+  
+  .star {
+    top: -0.75em;
+  }
+  
+  .wars {
+    bottom: -0.5em;
+  }
+  
+  .byline {
+    color: #fff;
+    font-family: "ITC Serif Gothic", Lato;
+    font-size: 2.25em;
+    left: -2em;
+    letter-spacing: 0.4em;
+    right: -2em;
+    text-align: center;
+    text-transform: uppercase;
+    top: 40%;
+  }
+  
+  /* STARWARS TEXT */
+  
+  #titles p {
+    color: yellow;
+  }
+  
+  #titles {
+    position: absolute;
+    width: 18em;
+    height: 50em;
+    bottom: 0;
+    left: 50%;
+    margin-left: -9em;
+    font-size: 350%;
+    text-align: justify;
+    transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(25deg);
+  }
+  
+  #titles:after
+  {
+      position: absolute;
+      content: ' ';
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 60%;
+      background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+      pointer-events: none;
+  }
+  
+  #titlecontent
+  {
+      position: absolute;
+      top: 100%;
+      animation: scroll 100s linear 8s infinite;
+  }
+  
+  

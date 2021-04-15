@@ -1,7 +1,6 @@
 import { inject } from 'aurelia-framework';
 import { StarwarsService } from './../../../services/starwars-service';
 import {Movie} from '../../../infrastructure/models/movie'
-import { responseTypeTransformer } from 'aurelia-http-client';
 
 @inject(StarwarsService)
 export class MovieList {
